@@ -1,17 +1,15 @@
-/*jslint node:true */
-'use strict';
+var newsStories = new XMLHttpRequest(); //Creating a new HTTP request.
+var newsObject; //This object will store data came from NewsAPI
+var currentPage = 1; //Current page accessed by user.
+var key = 'cd96504d69bb4f03ad48e5cbfc2e3778'; //API Key generated from NewsAPI (To get yourself one visit https://newsapi.org/ ).
 
-var newsStories = new XMLHttpRequest();
-var newsObject;
-var currentPage = 1;
-var key = 'cd96504d69bb4f03ad48e5cbfc2e3778';
-
+//Function to get News according to category.
 function loadNews(category) {
 
     var url = '//newsapi.org/v2/top-headlines?' +
         'country=in&' +
         'apiKey=' + key;
-    document.getElementById('nav1').className = "active";
+    document.getElementById('nav1').className = "active"; 
 
 
     if (category === 1) { //featured
@@ -111,8 +109,9 @@ function loadNews(category) {
     newsStories.open('GET', url, true);
     newsStories.responseType = 'text';
     newsStories.send(null);
-}
+} //End of function.
 
+//Function loads news as the News are fetched from NewsAPI.
 newsStories.onload = function () {
     var imgPath, i = 0, desc, diff, diffInHours, hoursRounded, pubDate, currentDate;
     if (newsStories.status === 200) {
@@ -151,11 +150,12 @@ newsStories.onload = function () {
             document.getElementById('time-' + i).innerHTML = hoursRounded;
         }
     } //end if
-}; //end function
+}; //End of function.
 
+// Function redirects user to source page of News.
 function clickCard(articleNumber) {
     var storyUrl = newsObject.articles[articleNumber].url;
     window.open(storyUrl, "_blank");
-}
+} //End of function.
 
-loadNews(currentPage);
+loadNews(currentPage); //Calling loadNews function.

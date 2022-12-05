@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 
-       <head>
+<head>
     <meta charset="utf-8">
-    
-    <title>TechToday</title>
 
-    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging whena phone is turned sideways-->
+    <title>NewsApp</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- *************** LOAD A GOOGLE FONT ****************** -->
@@ -30,11 +30,12 @@
 
     <div id="wrapper">
 
+        <!-- page header starts -->
         <div id="header-container">
             <header>
-                <h1>TechToday</h1>
+                <h1>NewsApp</h1>
             </header>
-
+            <!-- navigation bar starts -->
             <div id="navWrapper" class="scrollmenu">
                 <nav>
                     <a href="#top" id="nav1" onclick="loadNews(1)">Featured</a>
@@ -46,9 +47,11 @@
                     <a href="#top" id="nav7" onclick="loadNews(7)">Sports</a>
                 </nav>
             </div>
-        </div>
+            <!-- navigation bar ends -->
 
-        <!-- page content here -->
+        </div> <!-- page header ends -->
+
+        <!-- page content starts -->
         <main>
             <div id=main-body>
                 <section id="left">
@@ -279,7 +282,9 @@
 
 
                 <footer>
-                    <p><h4>&#169;TechToday<a href="https://newsapi.org/"> |News Api</a></h4></p>
+                    <p>
+                    <h4>&#169;NewsApp<a href="https://newsapi.org/"> |NewsAPI</a></h4>
+                    </p>
                 </footer>
             </div>
 
