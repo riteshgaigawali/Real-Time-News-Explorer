@@ -28,3 +28,5 @@ The News Search Web App is a user-friendly application designed to solve informa
 ## Credits
 - **NewsAPI**: Provides real-time access to news articles from a wide range of sources.
 
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
