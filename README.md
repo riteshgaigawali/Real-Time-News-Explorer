@@ -30,5 +30,3 @@ The News Search Web App is a user-friendly application designed to solve informa
 ## Credits
 - **NewsAPI**: Provides real-time access to news articles from a wide range of sources.
 
-
-Feel free to customize the README file further based on your project's specific details and requirements.
