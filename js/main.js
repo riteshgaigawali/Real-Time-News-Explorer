@@ -1,6 +1,7 @@
 var newsStories = new XMLHttpRequest(); //Creating a new HTTP request.
 var newsObject; //This object will store data came from NewsAPI
 var currentPage = 1; //Current page accessed by user.
+<<<<<<< HEAD
 var key = "cd96504d69bb4f03ad48e5cbfc2e3778"; //API Key generated from NewsAPI (To get yourself one visit https://newsapi.org/ ).
 var flagStatus = new XMLHttpRequest(); // Creating a new HTTP request for flag status retrival.
 var flagObject; // This object will store flag details.
@@ -24,6 +25,9 @@ flagStatus.onload = function () {
     flag = flagObject.enabled;
   }
 };
+=======
+var key = 'Your API Key'; //API Key generated from NewsAPI (To get yourself one visit https://newsapi.org/ ).
+>>>>>>> 5bf1b167bebe831991cba45db7b52ffa078467a1
 
 //Function to get News according to category.
 function loadNews(category) {
@@ -204,6 +208,7 @@ function clickCard(articleNumber) {
   window.open(storyUrl, "_blank");
 } //End of function.
 
+<<<<<<< HEAD
 function redirectToLoginPage() {
   window.location.href = "login.html"; // Redirect to the login page
 }
@@ -216,4 +221,6 @@ function login() {
   console.log("loggin called........");
 }
 
+=======
+>>>>>>> 5bf1b167bebe831991cba45db7b52ffa078467a1
 loadNews(currentPage); //Calling loadNews function.
