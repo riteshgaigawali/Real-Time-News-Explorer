@@ -1,33 +1,7 @@
 var newsStories = new XMLHttpRequest(); //Creating a new HTTP request.
 var newsObject; //This object will store data came from NewsAPI
 var currentPage = 1; //Current page accessed by user.
-<<<<<<< HEAD
 var key = "cd96504d69bb4f03ad48e5cbfc2e3778"; //API Key generated from NewsAPI (To get yourself one visit https://newsapi.org/ ).
-var flagStatus = new XMLHttpRequest(); // Creating a new HTTP request for flag status retrival.
-var flagObject; // This object will store flag details.
-var flag; // This variable will store the flag status.
-
-//Function to retrive flag data from server.
-function retriveFlag(id) {
-  var url = "http://localhost:8080/optitoggle/toggle/" + id;
-  flagStatus.open("GET", url, true);
-  flagStatus.responseType = "text";
-  flagStatus.send(null);
-}
-
-retriveFlag(26);
-
-//Function loads flag details as they are fetched.
-flagStatus.onload = function () {
-  if (flagStatus.status === 200) {
-    flagObject = JSON.parse(flagStatus.responseText);
-    console.log(flagObject);
-    flag = flagObject.enabled;
-  }
-};
-=======
-var key = 'Your API Key'; //API Key generated from NewsAPI (To get yourself one visit https://newsapi.org/ ).
->>>>>>> 5bf1b167bebe831991cba45db7b52ffa078467a1
 
 //Function to get News according to category.
 function loadNews(category) {
@@ -159,7 +133,6 @@ newsStories.onload = function () {
     hoursRounded,
     pubDate,
     currentDate;
-  console.log(flag);
   if (newsStories.status === 200) {
     newsObject = JSON.parse(newsStories.responseText);
     console.log(newsObject);
@@ -208,19 +181,7 @@ function clickCard(articleNumber) {
   window.open(storyUrl, "_blank");
 } //End of function.
 
-<<<<<<< HEAD
-function redirectToLoginPage() {
-  window.location.href = "login.html"; // Redirect to the login page
-}
-
-function redirectToSignupPage() {
-  window.location.href = "signup.html"; // Redirect to the sign-up page
-}
-
-function login() {
-  console.log("loggin called........");
-}
-
-=======
->>>>>>> 5bf1b167bebe831991cba45db7b52ffa078467a1
-loadNews(currentPage); //Calling loadNews function.
+// Event listener for DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function () {
+  loadNews(1); // Assuming 1 is the default category you want to load on startup.
+});
