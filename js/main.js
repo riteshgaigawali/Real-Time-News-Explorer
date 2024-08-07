@@ -5,12 +5,16 @@ var key = "cd96504d69bb4f03ad48e5cbfc2e3778"; // API Key generated from NewsAPI
 
 // Function to get News according to category.
 function loadNews(category) {
-  var url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + key;
+  var url =
+    "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=" +
+    key;
   document.getElementById("nav1").className = "active";
 
   if (category === 1) {
     // featured
-    url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + key;
+    url =
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=" +
+      key;
     document.getElementById("nav1").className = "active";
     document.getElementById("nav2").className = "";
     document.getElementById("nav3").className = "";
@@ -22,7 +26,7 @@ function loadNews(category) {
   } else if (category === 2) {
     // tech
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "active";
@@ -35,7 +39,7 @@ function loadNews(category) {
   } else if (category === 3) {
     // business
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "";
@@ -48,7 +52,7 @@ function loadNews(category) {
   } else if (category === 4) {
     // entertainment
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "";
@@ -61,7 +65,7 @@ function loadNews(category) {
   } else if (category === 5) {
     // health
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "";
@@ -74,7 +78,7 @@ function loadNews(category) {
   } else if (category === 6) {
     // science
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "";
@@ -87,7 +91,7 @@ function loadNews(category) {
   } else if (category === 7) {
     // sports
     url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=" +
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=" +
       key;
     document.getElementById("nav1").className = "";
     document.getElementById("nav2").className = "";
