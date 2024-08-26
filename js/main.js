@@ -1,7 +1,7 @@
 var newsStories = new XMLHttpRequest(); // Creating a new HTTP request.
 var newsObject; // This object will store data came from NewsAPI
 var currentPage = 1; // Current page accessed by user.
-var key = "your-api-key"; // API Key generated from NewsAPI
+var key = "cd96504d69bb4f03ad48e5cbfc2e3778"; // API Key generated from NewsAPI
 
 // Function to get News according to category.
 function loadNews(category) {
@@ -116,7 +116,7 @@ newsStories.onload = function () {
     hoursRounded,
     pubDate,
     currentDate;
-  if (newsStories.status === 200) {
+  if (newsStories.status == 200) {
     newsObject = JSON.parse(newsStories.responseText);
     console.log(newsObject);
     for (i; i < newsObject.articles.length; i += 1) {
